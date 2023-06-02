@@ -7,6 +7,8 @@
     <meta name ="keywords" content="Calc IMC, Calculadora IMC, IMC, Indice de Massa Corporal">
     <meta name ="ref" content="https://www.youtube.com/watch?v=i6t2jaRxos4">
     <meta name ="ref" content="https://www.w3schools.com/js/default.asp">
+    <meta name ="ref" content="https://pt.stackoverflow.com/questions/339339/percorrer-gradiente-de-cor-de-acordo-com-o-valor">
+    
 
     <title>IMC Calculator - MBA ES_25</title>
 
@@ -17,19 +19,19 @@
         <h1> IMC Calculator</h1>
 
         <p>
-            <span>Peso</span>
-            <input id="peso" class="textbox" type="text" />
+            <span>Peso (Kg)</span>
+            <input id="peso" class="textbox" type="text" value="81.5"/>
         </p>
         <p>
-            <span>Altura</span>
-            <input id="altura" class="textbox" type="text" />    
+            <span>Altura (m)</span>
+            <input id="altura" class="textbox" type="text" value="1.75"/>    
         </p>
 
         <button id="button" class="button-cta" onclick="MyFuncCalc()">Calculador</button>
     </main>
 
     <div id="container-imc" class="container-imc hide">
-        <span class="title">IMC calculado:</span>
+        <span class="title">IMC Calculado:</span>
         <span id="imc" class="imc"></span>
         <p class="legenda">
             <span class="legenda">Magreza até 18,5 kg/m2</span>

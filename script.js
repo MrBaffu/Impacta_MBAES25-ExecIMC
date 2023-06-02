@@ -1,23 +1,30 @@
 console.log ("Start");
 
-
-let pesoElement = document.querySelector("#peso");
-let alturaElement = document.querySelector("#altura");
-
-let buttonElement = document.querySelector("#button");
-
-let imcElement = document.querySelector("#imc");
-
-let containerIMC = document.querySelector("#container-imc");
-
-let varIMC = document.querySelector("#container-imc")
-
-
 function MyFuncCalc(){
-    alert(document.querySelector("#peso").innerHTML);
-    document.querySelector("#container-imc").classList.remove("hide");
-    document.querySelector("#imc").innerHTML = "AKI";
+    let varPeso = document.getElementById("peso").value;
 
+    if (isNaN(varPeso) || varPeso < 1 || varPeso > 999)
+    {
+        alert ("Valor informado para o Peso incorreto");
+        document.getElementById("peso").value = "";
+    }
+    else
+    {
+        let varAltura = document.getElementById("altura").value;
+        if (isNaN(varAltura) || varAltura < 1 || varAltura > 3)
+        {
+            alert ("Valor informado para a Altura incorreto");
+            document.getElementById("altura").value = "";
+        }
+        else
+        {
+            let varIMCResult = varPeso / (varAltura ** 2)
+            
+            document.getElementById("imc").innerHTML = varIMCResult.toFixed(2);
+            document.getElementById("container-imc").classList.remove("hide");
+            
+        }
+    }
 }
 
 console.log ("End");
